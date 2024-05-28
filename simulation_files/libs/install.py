@@ -48,6 +48,7 @@ package_to_import_name = {
     "tqdm": "tqdm",
     "imageio": "imageio",
     "nbformat": "nbformat",
+    "geopandas": "geopandas",
 }
 
 if __name__ == "__main__":

@@ -37,4 +37,5 @@ import os
 from typing import Optional, List, Tuple
 import sys
 import json
+import geopandas as gpd
 np.random.seed(seed=42)

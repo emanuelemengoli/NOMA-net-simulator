@@ -23,9 +23,44 @@ S = 3 #lin-scale
 ALPHA = 2 #lin-scale
 BS_MAX_RANGE = 10 #km
 
-def simulation_parms():
-    # Get all globals defined in this module
+
+# def simulation_parms():
+#     # Get all globals defined in this module
+#     for name, val in globals().items():
+#         if not name.startswith('__') and not callable(val):
+#             print(f"{name}: {val}")
+
+
+
+def simulation_params():
+    # Define variable units
+    units = {
+        'earth_radius_km': 'km',
+        'ORIGIN': 'coordinates (lat, long)',
+        'DATA_SOURCE_LINK': 'URL',
+        'NET_WIDTH': 'km',
+        'NET_HEIGHT': 'km',
+        'SITE_TYPE': 'type',
+        'OPERATOR': 'name',
+        'GEO_AREA': 'area',
+        'TILE_SIZE': 'km',
+        'MU_UE': 'units',
+        'SIGMA_UE': 'units',
+        'POPULATION': 'people',
+        'NETWORK_DENSITY': 'people/km^2',
+        'OPERATOR_MARKET_SHARE': 'fraction',
+        'ACTIVE_UE_FRACTION': 'fraction',
+        'UE_MAX_TILE_DISTANCE': 'tiles',
+        'W': 'MHz',
+        'N': 'dBm/Hz',
+        'G0': 'linear scale',
+        'BS_P_TX': 'dBm',
+        'S': 'linear scale',
+        'ALPHA': 'linear scale',
+        'BS_MAX_RANGE': 'km'
+    }
+    # Print all globals with their units
     for name, val in globals().items():
-        if not name.startswith('__') and not callable(val):
-            print(f"{name}: {val}")
+        if name in units and not callable(val):
+            print(f"{name} ({units[name]}): {val}")
 
