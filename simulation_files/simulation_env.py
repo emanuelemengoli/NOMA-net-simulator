@@ -1,6 +1,7 @@
 
 earth_radius_km = 6371.0 #km
 ORIGIN = (48.81778, 2.23333)
+DISTANCE_METRIC = 'km'
 DATA_SOURCE_LINK = 'https://files.data.gouv.fr/arcep_donnees/mobile/sites/2022_T3/2022_T3_sites_Metropole.csv'
 NET_WIDTH = 17.014 #km
 NET_HEIGHT = 9.298 #km
@@ -38,6 +39,7 @@ def simulation_params():
         'earth_radius_km': 'km',
         'ORIGIN': 'coordinates (lat, long)',
         'DATA_SOURCE_LINK': 'URL',
+        'DISTANCE_METRIC' : 'km',
         'NET_WIDTH': 'km',
         'NET_HEIGHT': 'km',
         'SITE_TYPE': 'type',
